@@ -267,6 +267,7 @@ endf
 "}}}1
 " * Open & Close {{{1
 fu! s:Open()
+  highlight CursorLine ctermbg=235
 	cal s:log(1)
 	cal s:getenv()
 	cal s:execextvar('enter')
@@ -289,6 +290,7 @@ fu! s:Open()
 endf
 
 fu! s:Close()
+  highlight CursorLine ctermbg=bg
 	cal s:buffunc(0)
 	if winnr('$') == 1
 		bw!
